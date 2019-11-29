@@ -18,18 +18,8 @@ class RootIndex extends React.Component {
           <Helmet title={siteTitle} />
           <Hero data={author.node} />
           <div className="wrapper">
-            <h2 className="section-headline">“Nunca dudes que un pequeño grupo de personas inteligentes y comprometidas pueden cambiar el mundo. De hecho, es lo único capaz de cambiarlo” - Margaret Mead</h2>
-            <blockquoute>
-            </blockquoute>
-            <ul className="article-list">
-              {posts.map(({ node }) => {
-                return (
-                  <li key={node.slug}>
-                    <ArticlePreview article={node} />
-                  </li>
-                )
-              })}
-            </ul>
+            <h2 className="section-headline">¿Qué es un principio?</h2>
+
           </div>
         </div>
       </Layout>
@@ -40,7 +30,7 @@ class RootIndex extends React.Component {
 export default RootIndex
 
 export const pageQuery = graphql`
-  query HomeQuery {
+  query NuestrosPrincipiosPageQuery {
     site {
       siteMetadata {
         title
